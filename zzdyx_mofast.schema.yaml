@@ -60,8 +60,9 @@ translator:
   dictionary: zzdyx_mofast
   prism: zzdyx_mofast
   enable_charset_filter: true
-  enable_sentence: true
   enable_encoder: true
+  enable_completion: true
+  enable_sentence: false
   encode_commit_history: true
   max_phrase_length: 4
 
