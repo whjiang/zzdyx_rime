@@ -28,22 +28,42 @@ abc_segmentor:
 ```
 
 ## 安装方法
-### 安装拼音输入法
 本输入法的编码反查和拼音混输功能依赖于
 
  - [袖珍简化字拼音](https://github.com/rime/rime-pinyin-simp) **`pinyin-simp`**
 
-所以需要先用[東風破](https://github.com/rime/plum) 安装 [袖珍简化字拼音](https://github.com/rime/rime-pinyin-simp) 。安裝命令： 
+所以在安装哲哲豆音形时，同时需要安装`pinyin-simp`输入法。
+
+安装步骤：
+1. 安装 [東風破](https://github.com/rime/plum) 。
+2. 使用 [東風破](https://github.com/rime/plum) 安装哲哲豆音形。
+3. 修改Rime的配置增加哲哲豆音形选项。
+4. 重新部署RIME，以生效。
+
+### 安装[東風破](https://github.com/rime/plum) 
+具体安装方法见[東風破](https://github.com/rime/plum) 官方网站。
+
+简单来说，Linux/Mac上使用下列命令安装：
+```
+curl -fsSL https://git.io/rime-install | bash
+```
+
+Windows上用家可以通過 小狼毫 0.11 以上「輸入法設定／獲取更多輸入方案」調用配置管理器或者[東風破](https://github.com/rime/plum) 官方网站列出的其他安装方法。
+
+### 安装哲哲豆音形
+在Linux、MAC上使用以下命令安装：
+```
+./rime-install pinyin-simp whjiang/zzdyx_rime
+```
+
+其中, rime-install是[東風破](https://github.com/rime/plum) 的命令。在Windows上，请替换为相应的命令。
+
+安装 [袖珍简化字拼音](https://github.com/rime/rime-pinyin-simp) 。安裝命令： 
 ```
 bash rime-install pinyin-simp
 ```
 
-其实也就是把`pinyin_simp.schema.yaml`和`pinyin_simp.dict.yaml`两个文件从[GitHub](https://github.com/rime/rime-pinyin-simp)拷贝到了Rime的安装目录下。用户也可以自己把这两个文件下载后使用下面的安装方法copy到对应的目录即可。
-
-
-### 安装哲哲豆音形
-把本目录下的所有文件拷贝到Rime的用户目录。在MAC下是`~/Library/Rime`。
-
+### 修改Rime的配置增加哲哲豆音形选项
 然后在`~/Library/Rime`创建一个`default.custom.yaml`文件。文件内容如下：
 ```yaml
 patch:
@@ -52,6 +72,7 @@ patch:
     - {schema: zzdyx_mofast}  #哲哲豆音形快版
 ```
 
+###  重新部署RIME
 然后，在RIME菜单中选择“同步用户数据”和“重新部署”。就可以使用了。
 
 
