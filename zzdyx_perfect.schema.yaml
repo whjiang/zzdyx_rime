@@ -60,10 +60,11 @@ translator:
   dictionary: zzdyx_perfect
   prism: zzdyx_perfect
   enable_charset_filter: true
-  enable_encoder: true
+  enable_encoder: false
   enable_completion: true
   enable_sentence: false
   encode_commit_history: true
+  enable_user_dict: false
   max_phrase_length: 4
 
 #拼音混输
