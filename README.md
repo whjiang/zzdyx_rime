@@ -53,15 +53,10 @@ Windows上用家可以通過 小狼毫 0.11 以上「輸入法設定／獲取更
 ### 安装哲哲豆音形
 在Linux、MAC上使用以下命令安装：
 ```
-./rime-install pinyin-simp whjiang/zzdyx_rime
+bash rime-install pinyin-simp whjiang/zzdyx_rime
 ```
 
-其中, rime-install是[東風破](https://github.com/rime/plum) 的命令。在Windows上，请替换为相应的命令。
-
-安装 [袖珍简化字拼音](https://github.com/rime/rime-pinyin-simp) 。安裝命令： 
-```
-bash rime-install pinyin-simp
-```
+其中, `bash rime-install`是[東風破](https://github.com/rime/plum) 的命令。在Windows上，请替换为相应的命令（例如：`rime-install.bat`）。`pinyin-simp`和`whjiang/zzdyx_rime`是我们要通过[東風破](https://github.com/rime/plum) 安装的两个输入法名字。
 
 ### 修改Rime的配置增加哲哲豆音形选项
 然后在`~/Library/Rime`创建一个`default.custom.yaml`文件。文件内容如下：
